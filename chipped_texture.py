@@ -36,7 +36,7 @@ def render(engine, frame_end, samples=32):
         scene.cycles.preview_samples = samples
         scene.cycles.samples = samples
 
-def background_settings(color=(0, 0, 0, 1), image_path="C:/Program Files/Blender Foundation/Blender 4.1/4.1/datafiles/studiolights/world/forest.exr", strength=1):
+def background_settings(color=(0, 0, 0, 1), image_path=bpy.utils.resource_path('LOCAL') + "/datafiles/studiolights/world/forest.exr", strength=1):
     nodes = bpy.data.worlds["World"].node_tree.nodes
     links = bpy.data.worlds["World"].node_tree.links
 
